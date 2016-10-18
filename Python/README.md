@@ -2,7 +2,7 @@
 
 ## This file can create a basic outline for any of your MUN speeches within minutes.
 
-### INSTRUCTIONS FOR RUNNING THE PYTHON VERSION OF MUN SPEECHMAKER (MAC)
+### INSTRUCTIONS FOR RUNNING THE PYTHON VERSION OF MUN SPEECHMAKER (MAC):
 
 1. Open the Python Installer, and follow the instructions.
 2. Drag the ‘MUN_Speechmaker’ folder to the directory with the home symbol next to it in your Mac. This can be found in the sidebar of Finder.
