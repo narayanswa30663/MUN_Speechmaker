@@ -2,7 +2,7 @@
 
 ## This file can create a basic outline for any of your MUN speeches within minutes.
 
-###INSTRUCTIONS FOR RUNNING THE RUBY VERSION OF MUN SPEECHMAKER (MAC):
+###Instructions for running the Ruby version of the MUN Speechmaker on a Mac:
 
 1. Drag the ‘MUN_Speechmaker-master’ folder to the directory with the home symbol next to it in your Mac. This can be found in the sidebar of Finder.
 2. Open the ‘Terminal’ application.
