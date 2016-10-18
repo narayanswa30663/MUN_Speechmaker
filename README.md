@@ -1,4 +1,4 @@
-# mun-speech-maker
+# Mun Speechmaker
 
 ## This file can create a basic outline for any of your MUN speeches within minutes.
 
