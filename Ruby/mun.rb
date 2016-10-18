@@ -43,7 +43,7 @@ x = (1..reasons).map { | i |
   [sc1,scq1]
 }
 
-concl = input "Enter a concluding sentence.
+concl = input "Enter a concluding sentence."
 
 def first_clause(x)
   x[0] = "This delegate would like to start by drawing the house's attention to #{x[0][0]}. #{x[0][1]}"
