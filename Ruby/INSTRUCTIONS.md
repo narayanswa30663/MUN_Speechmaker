@@ -12,3 +12,5 @@
 If for some reason these steps do not work, try running the Python version of this program. Instructions for doing so can be found in the ‘Python’ folder.
 
 ##### Important note: This file is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International license, and as such, it cannot be distributed without our prior consent. Read the LICENSE.md file for more details.
+
+###### Ruby version implemented by Raghav Narayanswamy.
