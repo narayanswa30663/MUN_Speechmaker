@@ -11,7 +11,7 @@
 5. Press the 'enter' key on your keyboard.
 6. The application should begin running.
 
-If for some reason these steps do not work, try running the Ruby version of this program. Instructions for doing so can be found in the ‘Ruby’ folder. 
+If for some reason these steps do not work, or if you'd prefer not to install software, try running the Ruby version of this program. Instructions for doing so can be found in the ‘Ruby’ folder. 
 
 ##### Important note: This file is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International license, and as such, it cannot be distributed without our prior consent. Read the LICENSE.md file for more details.
 
