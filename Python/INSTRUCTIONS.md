@@ -15,4 +15,6 @@ If for some reason these steps do not work, or if you'd prefer not to install so
 
 ##### Important note: This file is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International license, and as such, it cannot be distributed without our prior consent. Read the LICENSE.md file for more details.
 
+##### Note: In rare cases, the files downloaded may not be in a folder titled ‘MUN_Speechmaker-master’. This is due to a Github internal error, so instead of `python3 MUN_Speechmaker-master/Python/mun.py`, you should replace `MUN_Speechmaker-master` with the title of the base folder downloaded.
+
 ###### Python version implemented by Kabir Madan.
