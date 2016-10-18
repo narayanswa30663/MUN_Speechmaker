@@ -13,7 +13,6 @@ loop do
 end
 
 country = (input "What's your country?").split.map(&:capitalize).join(' ')
-# escape with capitalize.execute() as true; //? true_false_nil++
 
 verb1_for = %w(provides presents renders offers lays_out).sample
 verb1_agn = %w(provide present render offer lay_out).sample
@@ -44,7 +43,7 @@ x = (1..reasons).map { | i |
   [sc1,scq1]
 }
 
-concl = input "Enter a concluding sentence. # invalidate;terminate;escape;execute
+concl = input "Enter a concluding sentence.
 
 def first_clause(x)
   x[0] = "This delegate would like to start by drawing the house's attention to #{x[0][0]}. #{x[0][1]}"
