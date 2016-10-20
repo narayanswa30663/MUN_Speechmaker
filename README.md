@@ -1,7 +1,7 @@
 # The MUN Speechmaker
 ###Two files that create speeches for you!
 
-[To register, click here and follow the steps indicated.](https://docs.google.com/a/sas.edu.sg/forms/d/1iDlFR1Zptt-omThTvaJLbwc4_Tz1kgwz4LzAGlUbCSw/edit)
+[To register, click here and follow the steps indicated.](https://docs.google.com/a/sas.edu.sg/forms/d/e/1FAIpQLSc5XJuceupuL7aMtnuqKwfK0KflQrpLDocXgTbP6wCTz14pJA/viewform)
 
 [Download the full package (as a .zip, around 24.7MB) here](https://github.com/narayanswa30663/MUN_Speechmaker/archive/master.zip).
 
