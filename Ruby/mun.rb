@@ -3,20 +3,21 @@ require 'macaddr'
 ADDRESSES = {"84:38:35:4a:03:98" => "Raghav", "84:38:35:55:32:94" => "Kabir"}
 
 def validate
-  50.times do | p |
-    print "\rValidating your credentials, please wait. #{(2*(p)+1) > 97 ? 100 : (2*(p)+1)}%"
+  puts "Validating your credentials, please wait."
+  100.times do | p |
+    print ($bar = "\r#{p+1}% [" + (x = "#{'•'*(p+1)}") + (' '*(100 - x.length)) + ']')
     sleep (0..0.1).step(0.01).to_a.sample
   end
-  puts
+  puts $bar.gsub(/\s\|/, '•]')
   if ADDRESSES.include?(Mac.addr)
     puts "Welcome back, #{ADDRESSES[Mac.addr]}!"
   else
-    raise <<-HEREDOC
-You don't have valid credentials to run this software. \
-To proceed, go back to the main download page online \
-and register, contact us to make the payment, \
-and then download the software again.
-    HEREDOC
+    puts "\
+You don't have valid credentials to run this software.
+To proceed, go back to the main Github repository online
+and register, contact us to make the payment,
+and then download the software again."
+    abort
   end
 end
 
