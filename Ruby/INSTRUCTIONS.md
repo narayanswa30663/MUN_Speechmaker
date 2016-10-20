@@ -6,9 +6,10 @@
 
 1. Open the ‘Terminal’ application. If it is already open, open a new window.
 2. Type in `sudo gem install macaddr`. Enter your password when you are prompted to do so (it will not be visible as you type it).
-3. Type in (or copy and paste) the following, and press enter: `cd Downloads/MUN_Speechmaker-master_download`
-4. Type in (or copy and paste) the following, and press enter: `ruby Ruby/mun.rb`
-5. The application should begin running.
+3. Wait until the program is complete (you will know that it is complete when you see `7 gems installed` on a new line.
+4. Type in (or copy and paste) the following, and press enter: `cd Downloads/MUN_Speechmaker-master_download`
+5. Type in (or copy and paste) the following, and press enter: `ruby Ruby/mun.rb`
+6. The application should begin running.
 
 ##### If for some reason these steps do not work, try running the Python version of this program. Instructions for doing so can be found in the ‘Python’ folder. 
 
