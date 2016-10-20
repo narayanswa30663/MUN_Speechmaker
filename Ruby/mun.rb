@@ -61,7 +61,7 @@ def last_clause(x)
   x[-1] = "Lastly, this delegate would like to draw the house's attention to #{x[2][0]}. #{x[2][1]}"
 end
 
-print tmplt.gsub(/_/, '')
+print tmplt.gsub(/_/, ' ')
 
 case reasons
   when 1
