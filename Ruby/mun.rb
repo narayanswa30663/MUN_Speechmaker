@@ -1,6 +1,6 @@
 require 'macaddr'
 
-ADDRESSES = {"84:38:35:4a:03:98" => "Raghav"}
+ADDRESSES = {"84:38:35:4a:03:98" => "Raghav", "84:38:35:55:32:94" => "Kabir"}
 
 def validate
   50.times do | p |
