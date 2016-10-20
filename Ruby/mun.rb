@@ -1,15 +1,39 @@
+require 'macaddr'
+
+ADDRESSES = {"84:38:35:4a:03:98" => "Raghav"}
+
+def validate
+  50.times do | p |
+    print "\rValidating your credentials, please wait. #{(2*(p)+1) > 97 ? 100 : (2*(p)+1)}%"
+    sleep (0..0.1).step(0.01).to_a.sample
+  end
+  puts
+  if ADDRESSES.include?(Mac.addr)
+    puts "Welcome back, #{ADDRESSES[Mac.addr]}!"
+  else
+    raise <<-HEREDOC
+You don't have valid credentials to run this software. \
+To proceed, go back to the main Github repository online \
+and register, contact us to make the payment, \
+and then download the software again.
+    HEREDOC
+  end
+end
+
+validate
+
 def input(text)
   print text, ' '
   gets.chomp
 end
 
 def integer_input(text)
-  (input text).to_i 
+  (input text).to_i
 end
 
 loop do
   $stance = (input "What's your stance [f/a]?").downcase
-  break if ['f', 'a'].include? $stance
+  break if %w(f a).include? $stance
 end
 
 country = (input "What's your country?").split.map(&:capitalize).join(' ')
@@ -25,8 +49,8 @@ issue = input "What's the issue?"
 reasons = integer_input "How many reasons do you have? (Limit of 4.)"
 
 for_template =
-    "\nHonorable chair, fellow delegates, and most esteemed guests, the delegate of #{country} urges all \
-#{['representatives','member states'].sample} to vote in favor of this resolution, as it clearly #{verb1_for} #{adj1} \
+    "\nHonorable chair, fellow delegates, and most esteemed guests, the delegate of #{country} urges all
+#{['representatives','member states'].sample} to vote in favor of this resolution, as it clearly #{verb1_for} #{adj1}
 solutions to solve the issue of #{issue}.\n"
 
 against_template =
@@ -83,7 +107,7 @@ case reasons
     last_clause(x)
     print x.join("\n")
   else
-    raise("Maximum of 4 reasons.")
+    puts("Maximum of 4 reasons.")
 end
 
-puts "\n", concl
+puts "\n", concl, "Thank you."
