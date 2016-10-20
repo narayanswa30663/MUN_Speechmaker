@@ -13,7 +13,7 @@ def validate
   else
     raise <<-HEREDOC
 You don't have valid credentials to run this software. \
-To proceed, go back to the main Github repository online \
+To proceed, go back to the main download page online \
 and register, contact us to make the payment, \
 and then download the software again.
     HEREDOC
