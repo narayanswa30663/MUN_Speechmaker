@@ -6,7 +6,7 @@
 
 1. Open the Python Installer, and follow the instructions.
 2. Open the ‘Terminal’ application.
-3. Type in (or copy and paste) the following, and press enter: `cd Downloads/MUN_Speechmaker-master`
+3. Type in (or copy and paste) the following, and press enter: `cd Downloads/MUN_Speechmaker-master_download`
 4. Type in (or copy and paste) the following, and press enter: `python3 Python/mun.py`
 5. The application should begin running.
 
