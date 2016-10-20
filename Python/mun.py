@@ -2,7 +2,7 @@
 
 import uuid, re
 
-valid_users = {"84:38:35:4a:03:98 ": "Raghav", "insert_yours_here": "Kabir", "insert_josh_here": "Josh Graybill"}
+valid_users = {"84:38:35:4a:03:98": "Raghav", "insert_yours_here": "Kabir", "insert_josh_here": "Josh Graybill"}
 
 try: print("Welcome, %s!" % valid_users[':'.join(re.findall('..', '%012x' % uuid.getnode()))])
 except: print("You don't have valid credentials to run this software. To proceed, go back to the main Github \nrepository online, and click the 'To register, click here and follow the steps indicated.' button, \ncontact us to make the payment, and then redownload the software.")
