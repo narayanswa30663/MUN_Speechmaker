@@ -4,7 +4,7 @@ def input(text)
 end
 
 def integer_input(text)
-  (input text).to_i
+  (input text).to_i 
 end
 
 loop do
