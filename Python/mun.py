@@ -5,7 +5,7 @@ import uuid, re
 valid_users = {"84:38:35:4a:03:98": "Raghav", "84:38:35:55:32:94": "Kabir", "insert_josh_here": "Josh Graybill"}
 
 try: 
-    print("Welcome, %s!" % valid_users[':'.join(re.findall('..', '%012x' % uuid.getnode()))])
+    print("Welcome back, %s!" % valid_users[':'.join(re.findall('..', '%012x' % uuid.getnode()))])
 except: 
     print("You don't have valid credentials to run this software. To proceed, go back to the main download \npage online, and click the 'To register, click here and follow the steps indicated.' button, \ncontact us to make the payment, and then redownload the software.")
     exit()
@@ -60,10 +60,10 @@ if (stance .lower ()=='a'):#line:97
     print ("Honorable chair, fellow delegates, and most esteemed guests, the delegate of %s urges all member states\
  to vote against this resolution, as the solutions that it %s are %s and %s, and do not help us solve the issue of %s.\
  This delegate would like to start by drawing the house's attention to %s. %s. %s Next, this delegate would like to\
- direct the attention of all member states to %s. %s. %s %s "%(country .title (),againstvrb1 ,OO0OO0000OO0OOO0O .choice (againstadj ),OO0OO0000OO0OOO0O .choice (againstadj ),issue ,c1 ,suggested ,badclause1 ,c2 ,suggested2 ,badclause2 ,consen ))#line:101
+ direct the attention of all member states to %s. %s. %s %s Thank you."%(country .title (),againstvrb1 ,OO0OO0000OO0OOO0O .choice (againstadj ),OO0OO0000OO0OOO0O .choice (againstadj ),issue ,c1 ,suggested ,badclause1 ,c2 ,suggested2 ,badclause2 ,consen ))#line:101
 elif (stance .lower ()=="f"):#line:102
     print ("Honorable chair, fellow delegates, and most esteemed guests, the delegate of %s urges all member states\
  to vote in favor of this resolution, as it clearly %s %s solutions to solve the\
  issue of %s. This delegate would like to start by drawing the house's attention to %s. %s. %s Next, this delegate would like to\
- direct the attention of all member states to %s. %smeme. %s %s "%(country .title (),frvrb1 ,fradj1 ,issue ,c1 ,suggested ,goodclause1 ,c2 ,suggested2 ,goodclause2 ,consen ))
+ direct the attention of all member states to %s. %smeme. %s %s Thank you."%(country .title (),frvrb1 ,fradj1 ,issue ,c1 ,suggested ,goodclause1 ,c2 ,suggested2 ,goodclause2 ,consen ))
 #e9015584e6a44b14988f13e2298bcbf9
