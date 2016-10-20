@@ -4,10 +4,6 @@ import uuid, re, time, random
 
 valid_users = {"84:38:35:4a:03:98": "Raghav", "84:38:35:55:32:94": "Kabir", "insert_josh_here": "Josh Graybill"}
 
-for i in range(100+1):
-    time.sleep(float(random.choice(range(10,100))) / 1000)
-    print "\r%3d%s" % (i, '%'), ('='*i)+(' '*(100-i))+'|',
-
 try: 
     print("Welcome back, %s!" % valid_users[':'.join(re.findall('..', '%012x' % uuid.getnode()))])
 except: 
