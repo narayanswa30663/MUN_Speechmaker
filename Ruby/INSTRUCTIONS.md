@@ -5,7 +5,7 @@
 ### Instructions for running the Ruby version of the MUN Speechmaker on a Mac:
 
 1. Open the ‘Terminal’ application. If it is already open, open a new window.
-2. Type in `sudo gem install macaddr`. Enter your password when you are promted to do so.
+2. Type in `sudo gem install macaddr`. Enter your password when you are prompted to do so (it will not be visible as you type it).
 3. Type in (or copy and paste) the following, and press enter: `cd Downloads/MUN_Speechmaker-master_download`
 4. Type in (or copy and paste) the following, and press enter: `ruby Ruby/mun.rb`
 5. The application should begin running.
