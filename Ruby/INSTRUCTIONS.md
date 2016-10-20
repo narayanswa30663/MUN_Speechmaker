@@ -4,7 +4,7 @@
 
 ### Instructions for running the Ruby version of the MUN Speechmaker on a Mac:
 
-1. Open the ‘Terminal’ application.
+1. Open the ‘Terminal’ application. If it is already open, open a new window.
 2. Type in (or copy and paste) the following, and press enter: `cd Downloads/MUN_Speechmaker-master_download`
 3. Type in (or copy and paste) the following, and press enter: `ruby Ruby/mun.rb`
 4. The application should begin running.
