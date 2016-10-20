@@ -2,7 +2,7 @@
 
 import uuid, re
 
-valid_users = {"84:38:35:4a:03:98": "Raghav", "insert_yours_here": "Kabir", "insert_josh_here": "Josh Graybill"}
+valid_users = {"84:38:35:4a:03:98": "Raghav", "84:38:35:55:32:94": "Kabir", "insert_josh_here": "Josh Graybill"}
 
 try: 
     print("Welcome, %s!" % valid_users[':'.join(re.findall('..', '%012x' % uuid.getnode()))])
