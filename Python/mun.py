@@ -1,13 +1,22 @@
 # -*- coding: utf-8 -*-
 
-import uuid, re, time, random
+import uuid, re, time, random, datetime
 
-valid_users = {"84:38:35:4a:03:98": "Raghav", "84:38:35:55:32:94": "Kabir", "insert_josh_here": "Josh Graybill"}
+valid_users = {"84:38:35:4a:03:98": ["Raghav", datetime.date.today() + datetime.timedelta(days=365)],
+               "84:38:35:55:32:94": ["Kabir", datetime.date.today() + datetime.timedelta(days=365)],
+               "insert_josh_here": ["Josh Graybill", datetime.date.today() + datetime.timedelta(days=3)]}
 
-try: 
-    print("Welcome back, %s!" % valid_users[':'.join(re.findall('..', '%012x' % uuid.getnode()))])
-except: 
-    print("You don't have valid credentials to run this software. To proceed, go back to the main download \npage online, and click the 'To register, click here and follow the steps indicated.' button, \ncontact us to make the payment, and then redownload the software.")
+print("Validating your credentials, please wait.")
+
+try:
+    x = valid_users[':'.join(re.findall('..', '%012x' % uuid.getnode()))]
+    print("Welcome, %s!" % (x)[0])
+except:
+    print("You don't have valid credentials to run this software. To proceed, go back to the main Github \nrepository online, and click the 'To register, click here and follow the steps indicated.' button, \ncontact us to make the payment, and then redownload the software.")
+    exit()
+
+if x[1] < datetime.date.today():
+    print("Your trial period has ended. To purchase the full version, register online and contact one of us.")
     exit()
 
 import random as OO0OO0000OO0OOO0O #line:3
@@ -60,10 +69,10 @@ if (stance .lower ()=='a'):#line:97
     print ("Honorable chair, fellow delegates, and most esteemed guests, the delegate of %s urges all member states\
  to vote against this resolution, as the solutions that it %s are %s and %s, and do not help us solve the issue of %s.\
  This delegate would like to start by drawing the house's attention to %s. %s. %s Next, this delegate would like to\
- direct the attention of all member states to %s. %s. %s %s Thank you."%(country .title (),againstvrb1 ,OO0OO0000OO0OOO0O .choice (againstadj ),OO0OO0000OO0OOO0O .choice (againstadj ),issue ,c1 ,suggested ,badclause1 ,c2 ,suggested2 ,badclause2 ,consen ))#line:101
+ direct the attention of all member states to %s. %s. %s %s "%(country .title (),againstvrb1 ,OO0OO0000OO0OOO0O .choice (againstadj ),OO0OO0000OO0OOO0O .choice (againstadj ),issue ,c1 ,suggested ,badclause1 ,c2 ,suggested2 ,badclause2 ,consen ))#line:101
 elif (stance .lower ()=="f"):#line:102
     print ("Honorable chair, fellow delegates, and most esteemed guests, the delegate of %s urges all member states\
  to vote in favor of this resolution, as it clearly %s %s solutions to solve the\
  issue of %s. This delegate would like to start by drawing the house's attention to %s. %s. %s Next, this delegate would like to\
- direct the attention of all member states to %s. %smeme. %s %s Thank you."%(country .title (),frvrb1 ,fradj1 ,issue ,c1 ,suggested ,goodclause1 ,c2 ,suggested2 ,goodclause2 ,consen ))
+ direct the attention of all member states to %s. %smeme. %s %s "%(country .title (),frvrb1 ,fradj1 ,issue ,c1 ,suggested ,goodclause1 ,c2 ,suggested2 ,goodclause2 ,consen ))
 #e9015584e6a44b14988f13e2298bcbf9
