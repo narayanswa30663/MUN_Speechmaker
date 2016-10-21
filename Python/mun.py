@@ -2,21 +2,18 @@
 
 import uuid, re, time, random, datetime
 
-valid_users = {"84:38:35:4a:03:98": ["Raghav", datetime.date.today() + datetime.timedelta(days=365)],
-               "84:38:35:55:32:94": ["Kabir", datetime.date.today() + datetime.timedelta(days=365)],
-               "insert_josh_here": ["Josh Graybill", datetime.date.today() + datetime.timedelta(days=3)]}
+valid_users = {"84:38:35:4a:03:98": "Raghav",
+               "84:38:35:55:32:94": "Kabir",
+               "insert_josh_here": "Josh Graybill"}
 
 print("Validating your credentials, please wait.")
 
+time.sleep(1)
+
 try:
-    x = valid_users[':'.join(re.findall('..', '%012x' % uuid.getnode()))]
-    print("Welcome, %s!" % (x)[0])
+    print("Welcome, %s!" % valid_users[':'.join(re.findall('..', '%012x' % uuid.getnode()))])
 except:
     print("You don't have valid credentials to run this software. To proceed, go back to the main Github \nrepository online, and click the 'To register, click here and follow the steps indicated.' button, \ncontact us to make the payment, and then redownload the software.")
-    exit()
-
-if x[1] < datetime.date.today():
-    print("Your trial period has ended. To purchase the full version, register online and contact one of us.")
     exit()
 
 import random as OO0OO0000OO0OOO0O #line:3
