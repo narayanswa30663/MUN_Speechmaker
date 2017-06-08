@@ -3,7 +3,7 @@
 
 [To register, click here and follow the steps indicated.](https://docs.google.com/a/sas.edu.sg/forms/d/e/1FAIpQLSc5XJuceupuL7aMtnuqKwfK0KflQrpLDocXgTbP6wCTz14pJA/viewform)
 
-[Download the full package (as a .zip, around 24.7MB) here](https://github.com/narayanswa30663/MUN_Speechmaker/archive/master.zip).
+[Download the full package (as a .zip, around 23.4MB) here](https://github.com/narayanswa30663/MUN_Speechmaker/archive/master.zip).
 
 [Read the Python instructions here](Python/INSTRUCTIONS.md), and [the Ruby instructions here](Ruby/INSTRUCTIONS.md).
 
