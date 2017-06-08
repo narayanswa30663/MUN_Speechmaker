@@ -13,9 +13,9 @@ We suggest that you take a look at both the files (Ruby and Python) and the resu
  
 Enjoy!
 
-#### Important note: This file is licensed under the Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International license, and as such, it cannot be distributed without our prior consent. In the event that unauthorized distribution is detected, the license of the distributing party will be revoked. Read the LICENSE.md file for more details. 
-
 ![alt text](http://creativecommons.org.nz/wp-content/uploads/2012/05/by-nc-nd.png "License")
+
+##### In the event that unauthorized distribution is detected, the license of the distributing party will be revoked. Read the LICENSE.md file for more details. 
 
 ##### Program created by Raghav and Kabir.
 
