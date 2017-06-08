@@ -1,16 +1,67 @@
 require 'macaddr'
 
-ADDRESSES = {"84:38:35:4a:03:98" => "Raghav", "84:38:35:55:32:94" => "Kabir"}
+require 'google/apis/sheets_v4'
+require 'googleauth'
+require 'googleauth/stores/file_token_store'
+
+require 'fileutils'
+
+OOB_URI = 'urn:ietf:wg:oauth:2.0:oob'
+APPLICATION_NAME = 'MUN Speechmaker'
+CLIENT_SECRETS_PATH = 'client_secret.json'
+CREDENTIALS_PATH = File.join(Dir.home, '.credentials',
+                             "sheets.googleapis.com-mun-speechmaker.yaml")
+
+SCOPE = Google::Apis::SheetsV4::AUTH_SPREADSHEETS_READONLY
+
+puts 'Validating your credentials, please wait.'
+
+##
+# Ensure valid credentials, either by restoring from the saved credentials
+# files or intitiating an OAuth2 authorization. If authorization is required,
+# the user's default browser will be launched to approve the request.
+#
+# @return [Google::Auth::UserRefreshCredentials] OAuth2 credentials
+def authorize
+  FileUtils.mkdir_p(File.dirname(CREDENTIALS_PATH))
+
+  client_id = Google::Auth::ClientId.from_file(CLIENT_SECRETS_PATH)
+  token_store = Google::Auth::Stores::FileTokenStore.new(file: CREDENTIALS_PATH)
+  authorizer = Google::Auth::UserAuthorizer.new(
+    client_id, SCOPE, token_store)
+  user_id = 'default'
+  credentials = authorizer.get_credentials(user_id)
+  if credentials.nil?
+    url = authorizer.get_authorization_url(
+      base_url: OOB_URI)
+    puts "Open the following URL in the browser and enter the " +
+         "resulting code after authorization"
+    puts url
+    code = gets
+    credentials = authorizer.get_and_store_credentials_from_code(
+      user_id: user_id, code: code, base_url: OOB_URI)
+  end
+  credentials
+end
+
+# Initialize the API
+service = Google::Apis::SheetsV4::SheetsService.new
+service.client_options.application_name = APPLICATION_NAME
+service.authorization = authorize
+
+USERS = []
+
+spreadsheet_id = '1zSj2icDHabI2J4606hPre-v9oKWvI6AoVpFH8NoRsC0'
+range = 'Form Responses 1!C2:E'
+response = service.get_spreadsheet_values(spreadsheet_id, range)
+puts 'No data found.' if response.values.empty?
+response.values.each do |row|
+  USERS.push([row[0], row[2]])
+end
 
 def validate
-  puts "Validating your credentials, please wait."
-  100.times do | p |
-    print ($bar = "\r#{p+1}% [" + (x = "#{'•'*(p+1)}") + (' '*(100 - x.length)) + ']')
-    sleep (0..0.1).step(0.01).to_a.sample
-  end
-  puts $bar.gsub(/\s\|/, '•]')
-  if ADDRESSES.include?(Mac.addr)
-    puts "Welcome back, #{ADDRESSES[Mac.addr]}!"
+  if USERS.any? { | i | i[0] == Mac.addr && i[1] == 'Valid' }
+    puts "Welcome back!"
   else
     puts "\
 You don't have valid credentials to run this software.
