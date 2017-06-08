@@ -13,8 +13,6 @@ We suggest that you take a look at both the files (Ruby and Python) and the resu
  
 Enjoy!
 
-![alt text](http://creativecommons.org.nz/wp-content/uploads/2012/05/by-nc-nd.png "License")
-
 ##### In the event that unauthorized distribution is detected, the license of the distributing party will be revoked. Read the LICENSE.md file for more details. 
 
 ##### Program created by Raghav and Kabir.
