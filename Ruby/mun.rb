@@ -16,6 +16,21 @@ SCOPE = Google::Apis::SheetsV4::AUTH_SPREADSHEETS_READONLY
 
 puts 'Validating your credentials, please wait.'
 
+require 'open-uri'
+
+def internet_connection?
+  begin
+    true if open("http://www.google.com/")
+  rescue
+    false
+  end
+end
+
+unless internet_connection?
+  puts "No internet connection. Try again later."
+  abort
+end
+
 ##
 # Ensure valid credentials, either by restoring from the saved credentials
 # files or intitiating an OAuth2 authorization. If authorization is required,
