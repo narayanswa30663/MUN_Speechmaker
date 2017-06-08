@@ -81,8 +81,7 @@ def validate
     puts "\
 You don't have valid credentials to run this software.
 To proceed, go back to the main Github repository online
-and register, contact us to make the payment,
-and then download the software again."
+to register, and then contact us to make the payment."
     abort
   end
 end
