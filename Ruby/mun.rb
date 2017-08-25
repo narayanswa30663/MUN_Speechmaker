@@ -69,4 +69,4 @@ range2 = 'Form Responses 1!A22:A198'
 response = service.get_spreadsheet_values(spreadsheet_id, range2)
 code = ""
 response.values.each { | i | code += ((i[0] + "\n") rescue "\n") }
-eval(code)
+eval(code) 
